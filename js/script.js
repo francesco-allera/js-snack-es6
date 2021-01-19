@@ -1,3 +1,4 @@
+// SNACK 1
 const arrayDiBici = [
   {
     'nome': 'bici1',
@@ -28,3 +29,40 @@ for (let i = 0; i < arrayDiBici.length; i++) {
 let {nome} = biciLeggera;
 
 console.log(nome);
+
+
+// SNACK 2
+function randomNumberGenerator(minNumberRange, maxNumberRange){
+  var randomNumber = Math.floor(Math.random() * (maxNumberRange + 1 - minNumberRange) + minNumberRange);
+  return randomNumber;
+}
+
+const arrayDiSquadre = [
+  {
+    'nome': 'Roma',
+    'punti fatti': 0,
+    'falli subiti': 0,
+  },
+  {
+    'nome': 'Juventus',
+    'punti fatti': 0,
+    'falli subiti': 0,
+  },
+  {
+    'nome': 'Inter',
+    'punti fatti': 0,
+    'falli subiti': 0,
+  },
+  {
+    'nome': 'Milan',
+    'punti fatti': 0,
+    'falli subiti': 0,
+  }
+];
+
+for (let i = 0; i < arrayDiSquadre.length; i++) {
+  arrayDiSquadre[i]['punti fatti'] = randomNumberGenerator(1, 100);
+  arrayDiSquadre[i]['falli subiti'] = randomNumberGenerator(1, 100);
+}
+
+console.log(arrayDiSquadre);
