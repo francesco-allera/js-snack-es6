@@ -1,19 +1,19 @@
 // SNACK 1
 const arrayDiBici = [
   {
-    'nome': 'bici1',
+    'nomeBici': 'bici1',
     'peso': 3,
   },
   {
-    'nome': 'bici2',
+    'nomeBici': 'bici2',
     'peso': 2,
   },
   {
-    'nome': 'bici3',
+    'nomeBici': 'bici3',
     'peso': 6,
   },
   {
-    'nome': 'bici4',
+    'nomeBici': 'bici4',
     'peso': 4,
   }
 ];
@@ -26,44 +26,57 @@ for (let i = 0; i < arrayDiBici.length; i++) {
   }
 }
 
-const {nome, peso} = biciLeggera;
+const {nomeBici, peso} = biciLeggera;
 
-console.log(`La ${nome} è la bici più leggera con il peso di ${peso} kg`);
+console.log(`La ${nomeBici} è la bici più leggera con il peso di ${peso} kg`);
 
 
 // SNACK 2
-function randomNumberGenerator(minNumberRange, maxNumberRange){
-  var randomNumber = Math.floor(Math.random() * (maxNumberRange + 1 - minNumberRange) + minNumberRange);
-  return randomNumber;
+function randomNumberGenerator(maxNumberRange){
+  return Math.floor(Math.random() * (maxNumberRange + 1));
 }
 
 const arrayDiSquadre = [
   {
-    'nome': 'Roma',
-    'punti fatti': 0,
-    'falli subiti': 0,
+    'nomeSquadra': 'Roma',
+    'puntiFatti': 0,
+    'falliSubiti': 0,
   },
   {
-    'nome': 'Juventus',
-    'punti fatti': 0,
-    'falli subiti': 0,
+    'nomeSquadra': 'Juventus',
+    'puntiFatti': 0,
+    'falliSubiti': 0,
   },
   {
-    'nome': 'Inter',
-    'punti fatti': 0,
-    'falli subiti': 0,
+    'nomeSquadra': 'Inter',
+    'puntiFatti': 0,
+    'falliSubiti': 0,
   },
   {
-    'nome': 'Milan',
-    'punti fatti': 0,
-    'falli subiti': 0,
+    'nomeSquadra': 'Milan',
+    'puntiFatti': 0,
+    'falliSubiti': 0,
   }
 ];
 
-// for (let i = 0; i < arrayDiSquadre.length; i++) {
-//   var {punti fatti} = arrayDiSquadre;
-//   {punti fatti} = randomNumberGenerator(1, 100);
-//   {falli subiti} = randomNumberGenerator(1, 50);
-// }
+for (let i = 0; i < arrayDiSquadre.length; i++) {
+  var squadra = arrayDiSquadre[i];
+  squadra.puntiFatti = randomNumberGenerator(100);
+  squadra.falliSubiti = randomNumberGenerator(50);
+}
 
-console.log(arrayDiSquadre);
+console.log('Primo array di squadre', arrayDiSquadre);
+
+const newArrayDiSquadre = [];
+
+for (let i = 0; i < arrayDiSquadre.length; i++) {
+  let vecchiaSquadra = arrayDiSquadre[i];
+  const {nomeSquadra, falliSubiti} = vecchiaSquadra;
+
+  newArrayDiSquadre.push({
+    nomeSquadra,
+    falliSubiti,
+  })
+}
+
+console.log('Secondo array di squadre', newArrayDiSquadre);
