@@ -21,14 +21,14 @@ const arrayDiBici = [
 let biciLeggera = arrayDiBici[0];
 
 for (let i = 0; i < arrayDiBici.length; i++) {
-  if (biciLeggera.peso > arrayDiBici[i].peso) {
+  if (arrayDiBici[i].peso < biciLeggera.peso) {
     biciLeggera = arrayDiBici[i];
   }
 }
 
-let {nome} = biciLeggera;
+const {nome, peso} = biciLeggera;
 
-console.log(nome);
+console.log(`La ${nome} è la bici più leggera con il peso di ${peso} kg`);
 
 
 // SNACK 2
@@ -60,9 +60,10 @@ const arrayDiSquadre = [
   }
 ];
 
-for (let i = 0; i < arrayDiSquadre.length; i++) {
-  arrayDiSquadre[i]['punti fatti'] = randomNumberGenerator(1, 100);
-  arrayDiSquadre[i]['falli subiti'] = randomNumberGenerator(1, 100);
-}
+// for (let i = 0; i < arrayDiSquadre.length; i++) {
+//   var {punti fatti} = arrayDiSquadre;
+//   {punti fatti} = randomNumberGenerator(1, 100);
+//   {falli subiti} = randomNumberGenerator(1, 50);
+// }
 
 console.log(arrayDiSquadre);
