@@ -45,7 +45,7 @@ const arrayDiSquadre = [
   {
     'nomeSquadra': 'Juventus',
     'puntiFatti': 0,
-    'falliSubiti': 0,
+    'falli Subiti': 0,
   },
   {
     'nomeSquadra': 'Inter',
