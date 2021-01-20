@@ -1,11 +1,11 @@
 function myFunction(array, min, max) {
   var newArray = [];
-  for (var i = min; i < max; i++) {
+  for (var i = min - 1; i < max; i++) {
     newArray.push(array[i]);
   }
   return newArray;
 }
 
-var mioArray = [1,2,3,4,5,6,7,8,9,10];
+var mioArray = ['primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo', 'ottavo', 'nono', 'decimo'];
 
 console.log(myFunction(mioArray, 2, 7));
