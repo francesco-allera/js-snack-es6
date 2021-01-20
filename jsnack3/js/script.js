@@ -8,4 +8,21 @@ function myFunction(array, min, max) {
 
 var mioArray = ['primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo', 'ottavo', 'nono', 'decimo'];
 
-console.log(myFunction(mioArray, 2, 7));
+var userMinValue = parseInt(prompt('Scegli il numero minimo'));
+
+var userMaxValue = parseInt(prompt('Scegli il numero massimo'));
+
+
+console.log(myFunction(mioArray, userMinValue, userMaxValue));
+
+
+const arrayFromConst = ['primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo', 'ottavo', 'nono', 'decimo'];
+
+let newArrayFromConst = [];
+
+// arrayFromConst.map((element) => {
+//   for (let x = )
+//   newArrayFromConst.push(element);
+// });
+//
+// console.log(newArrayFromConst);
